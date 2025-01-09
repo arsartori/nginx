@@ -1,5 +1,17 @@
 # nginx
 
+## 1) Servidor web HTTP (https://nginx.org/en/)
+
+    docker pull nginx:latest
+    docker run -d --name nginx -p 80:80 -p 443:443 nginx:latest
+
+## 2) Proxy Reverso
+
+    docker pull nginx:latest
+    docker run -d --name nginx -p 80:80 -p 443:443 nginx:latest
+    
+## 3) Balanceador de carga
+
 ### Atualizar nginx
     docker compose cp conf/default.conf nginx:/etc/nginx/conf.d/
 ### Atualizar node1
