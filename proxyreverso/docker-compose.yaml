@@ -1,8 +1,10 @@
 services:
   nginx:
-    image: nginx:1.27.0-alpine
+    image: nginx:stable-alpine
     container_name: nginx
     hostname: nginx
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - ./proxyreverso.conf:/etc/nginx/conf.d/proxyreverso.conf
